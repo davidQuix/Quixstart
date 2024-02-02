@@ -20,6 +20,20 @@ deployments:
         description: This is the output topic for car data
         required: true
         value: car-data
+  - name: Demo Data
+    application: Demo Data
+    deploymentType: Job
+    version: f1c62f26ed0e22e88b9fa9b2c571bf7898c88dc6
+    resources:
+      cpu: 200
+      memory: 200
+      replicas: 1
+    variables:
+      - name: Topic
+        inputType: OutputTopic
+        description: Name of the output topic to write into
+        required: true
+        value: f1-data
 
 # This section describes the Topics of the data pipeline
 topics:
