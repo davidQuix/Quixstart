@@ -1,0 +1,25 @@
+# Quix Project Descriptor
+# This file describes the data pipeline and configuration of resources of a Quix Project.
+
+metadata:
+  version: 1.0
+
+# This section describes the Deployments of the data pipeline
+deployments:
+  - name: Car Data
+    application: Car Data
+    deploymentType: Job
+    version: b43d58800becf60b6d592ccdbc420d4100494e3e
+    resources:
+      cpu: 200
+      memory: 200
+      replicas: 1
+    variables:
+      - name: output
+        inputType: OutputTopic
+        description: This is the output topic for car data
+        required: true
+        value: car-data
+
+# This section describes the Topics of the data pipeline
+topics: []
