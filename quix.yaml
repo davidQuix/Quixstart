@@ -22,4 +22,11 @@ deployments:
         value: car-data
 
 # This section describes the Topics of the data pipeline
-topics: []
+topics:
+  - name: car-data
+    persisted: false
+    configuration:
+      partitions: 1
+      replicationFactor: 2
+      retentionInMinutes: 1440
+      retentionInBytes: 52428800
