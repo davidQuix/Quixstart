@@ -1,0 +1,11 @@
+name: Complete Example
+language: python
+variables:
+  - name: output
+    inputType: OutputTopic
+    description: Name of the output topic to write into
+    defaultValue: write-example-output
+    required: true
+dockerfile: dockerfile
+runEntryPoint: main.py
+defaultFile: quix_functions.py
